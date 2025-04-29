@@ -348,7 +348,7 @@ function createIngredientGrid() {
     const gridStartY = 170; // Moved up from 180
     const itemWidth = 140;
     const itemHeight = 140;
-    const padding = 20;
+    const padding = 14;
     
     for (let row = 0; row < 4; row++) {
         for (let col = 0; col < 4; col++) {
