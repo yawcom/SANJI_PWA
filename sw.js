@@ -14,19 +14,17 @@ const urlsToCache = [
   './assets/icons/icon-512x512.png'
 ];
 
-// Aggiungi qui tutte le immagini delle ricette e degli ingredienti
-// Esempio: './assets/recipes/recipe1.png', ecc.
-
+/// Install service worker
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Cache opened');
         return cache.addAll(urlsToCache);
       })
   );
 });
 
+// Fetch from cache first, then network
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
@@ -36,11 +34,11 @@ self.addEventListener('fetch', event => {
           return response;
         }
         return fetch(event.request);
-      }
-    )
+      })
   );
 });
 
+// Update cache when new version is available
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
