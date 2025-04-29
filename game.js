@@ -80,7 +80,7 @@ function update() {
 
 function createStartScreen() {
     // Title
-    const titleText = this.add.text(config.width / 2, config.height / 5, 'Caccia agli Ingredienti con Sanji', {
+    const titleText = this.add.text(config.width / 2, config.height / 15, 'Caccia agli Ingredienti con Sanji', {
         fontFamily: 'Arial',
         fontSize: '35px',
         color: '#ffffff',
@@ -89,15 +89,16 @@ function createStartScreen() {
         strokeThickness: 6
     }).setOrigin(0.5);
 
+    this.add.rectangle( config.width/2, config.height /6, config.width, 80, 0x16213e).setOrigin(0.5, 0.5).setAlpha(0.5);
     // Game instructions text
-    const instructionsText = this.add.text(config.width / 2, config.height / 3, 
+    const instructionsText = this.add.text(config.width / 2, config.height / 6, 
         'Viene presentato un piatto delizioso la tua sfida è individuare i 4 ingredienti utilizzati per prepararlo!\n Fai attenzione ai dettagli: solo i veri intenditori riusciranno a indovinarli tutti!', {
             fontFamily: 'Arial',
         fontSize: '14px',
         fontStyle: 'bold',
         color: '#fff',
-        stroke: '#004400',
-        strokeThickness: 2,
+        //stroke: '#004400',
+        //strokeThickness: 2,
         align: 'center'
         //wordWrap: { width: config.width * 0.8 }
     }).setOrigin(0.5);//.setShadow(2, 2, '#fff', 2, false, true);
