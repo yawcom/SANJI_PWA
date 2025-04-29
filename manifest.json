@@ -1,0 +1,21 @@
+{
+  "name": "Caccia agli Ingredienti con Sanji",
+  "short_name": "Sanji Game",
+  "description": "Un gioco dove devi trovare gli ingredienti corretti per le ricette di Sanji",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#3a75c4",
+  "theme_color": "#3a75c4",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
