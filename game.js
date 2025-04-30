@@ -86,7 +86,7 @@ function update() {
 
 function createStartScreen() {
     // Title
-    const titleText = this.add.text(config.width / 2, config.height / 15, 'Caccia agli Ingredienti con Sanji', {
+    const titleText = this.add.text(config.width / 2, config.height / 15, 'Caccia agli ingredienti con Sanji', {
         fontFamily: 'Arial',
         fontSize: '35px',
         color: '#ffffff',
@@ -100,7 +100,7 @@ function createStartScreen() {
     const instructionsText = this.add.text(config.width / 2, config.height / 6, 
         'Viene presentato un piatto delizioso la tua sfida è individuare i 4 ingredienti utilizzati per prepararlo!\n Fai attenzione ai dettagli: solo i veri intenditori riusciranno a indovinarli tutti!', {
             fontFamily: 'Arial',
-        fontSize: '14px',
+        fontSize: '16px',
         fontStyle: 'bold',
         color: '#fff',
         //stroke: '#004400',
