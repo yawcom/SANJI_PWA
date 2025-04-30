@@ -35,6 +35,12 @@ let shuffledRecipes = [];
 let ingredientGrid = [];
 
 function preload() {
+
+    this.input.once('pointerdown', function () {
+        this.scale.startFullscreen();
+    }, this);
+
+    
     // Load background
     this.load.image('background_Game', 'assets/bg.png');
     this.load.image('background_Start', 'assets/bgStart.png');
