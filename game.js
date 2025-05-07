@@ -34,6 +34,15 @@ let totalRecipes = 10;
 let shuffledRecipes = [];
 let ingredientGrid = [];
 
+// Funzione per registrare la partita 
+function registraPartita() { 
+    const url = 'https://script.google.com/macros/s/AKfycbya7GidybLreaB9P7-dXhA6vg-5QpIUekeJz2E0xSkqkuoJPn6aNNH_WGBP1PgnkwryLw/exec'; 
+    fetch(`${url}?evento=SANJI`) 
+        .then(response => response.text()) 
+        .then(data => console.log('SANJI:', data)) 
+        .catch(error => console.error('Errore durante la registrazione della partita:', error)); 
+}
+
 function preload() {
 
    
@@ -167,6 +176,7 @@ function createStartScreen() {
     
     // Start game on click
     buttonContainer.on('pointerdown', function() {
+		registraPartita();
         startGame.call(this);
     }, this);
     
